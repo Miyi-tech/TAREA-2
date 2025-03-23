@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Primer Sitio Web</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body bgcolor="e2dedd">
+    <header>
+        <nav>
+            <h1 style="color: rgb(194, 26, 166); text-align: center;">TUTORA MIRYAN CASTRO - BIENVENIDOS</h1>
+            <p style="color: rgb(59, 13, 77); text-align: justify;">Aprende a mejorar tu español con la mejor tutora, te espero!!</p>
+            <h2 style="color: blueviolet; text-align: justify;">Sobre Mí</h2>
+            <p>Hola, mi nombre es Miryan, vivo en Colombia, me encanta enseñar, soy una persona paciente, carismática y amigable, te puedo ayudar a hablar, escribir y mejorar el español; reforzando mucho el vocabulario, la gramática, y la comprensión lectora. Trabajaremos de acuerdo a tus intereses y estaré disponible para trabajar con personas de todas la edades: Niños y Adultos.</p>
+            
+            <img src="imagen.jpg" width="10%" height="10%">
+            <img src="imag.jpg" width="15%" height="15%">
+            <img src="tutora.jpeg" width="15%" height="15%">
+            <h2 style="color: blueviolet; text-align: justify;">Contacto</h2>
+            <p>Puedes contactarme en <a href="http://www.instagram.com/miyi.cp?igsh=bnVnN25rbjVhNHBw">Mi pagina red social</a></p>
+    
+            <hr>
+			<h2 style="color: blueviolet; text-align: justify;">Hobbies</h2>
+		    <ul>
+                <li>Running</li>
+                <li>Reading and studying</li>
+                <li>Go to the Movies</li>
+            
+			</ul>
+              <hr>
+		      <h2 style="color: blueviolet; text-align: justify;">Tareas Priorizadas</h2>
+		    <ol>
+			    <li>Gym y Organizar Rutina</li>
+			    <li>Gym, lecciones y lectura </li>
+			    <li>Gym, lecciones y Deberes</li>
+			    <li>Gym, Lecciones y Exploración del medio</li>
+			    <li>Gym, Lecciones, Socializar</li>	
+		    </ol>
+            <hr>
+		    <h2 style="color: blueviolet; text-align: justify;">Horario semanal</h2>
+
+        </nav>
+    </header>
+    <div>
+		<table border="1" width="80%">
+			<thead>
+				<tr>
+					<th style="color: rgb(194, 26, 166); text-align: center;">Lunes</th>
+					<th style="color: rgb(194, 26, 166); text-align: center;">Martes</th>
+					<th style="color: rgb(194, 26, 166); text-align: center;">Miercoles</th>
+					<th style="color: rgb(194, 26, 166); text-align: center;">Jueves</th>
+					<th style="color: rgb(194, 26, 166); text-align: center;">Viernes</th>
+				</tr>
+			</thead>
+            <tbody>
+				<tr>
+					<td>Gym y Organizar Rutina</td>
+					<td>Gym, lecciones y lectura</td>
+					<td>Gym, lecciones y Deberes</td>
+					<td>Gym, Lecciones y Exploración del medio</td>
+					<td>Gym, Lecciones, Socializar</td>
+
+				</tr>
+			</tbody>
+		</table>
+        <hr>
+    </div>
+
+    <div class="Variables_tipo">
+        <h3 style="color: rgb(41, 128, 139); text-align: justify;">Formulario de Usuario</h3>
+
+        <form id="userForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="contacto">Motivo de Contacto:</label>
+            <input type="text" id="contacto" required>
+
+            <label>Correo: </label>
+            <input type="email" id="email" name="email">
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h3 style="color: rgb(41, 128, 139); text-align: justify;">Datos Ingresados:</h3>
+        <p id="resultado"></p>
+
+        <script>
+            document.getElementById("userForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita que la página se recargue
+
+                // Capturar datos
+                let nombre = document.getElementById("nombre").value.trim();
+                let contacto = document.getElementById("contacto").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let edad = document.getElementById("edad").value.trim();
+                let EsEstudiante = "Si";
+
+                // Validación básica
+                if (nombre === "" || contacto === "" || email === "" || edad === "") {
+                    alert("Todos los campos son obligatorios.");
+                    return;
+                }
+                // Verificacion de variable numerica
+                edad = parseInt(edad);
+                if (isNaN(edad) || edad <= 0) {
+                    alert("Ingrese una edad válida.");
+                    return;
+                }
+
+                let mensajeEdad = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+
+                // Mostrar datos en la página
+                document.getElementById("resultado").innerText = `Nombre: ${nombre}, Motivo de Contacto: ${contacto}, email: ${email}, Edad: ${edad}, ${mensajeEdad}`;
+            });
+            
+            l
+        </script>
+    </div>      
+    <br>
+    <footer>
+        <hr>
+		<p>&copy; 2025 Mi página web, todos los derechos reservados.</center>	
+		</p>
+    </footer>
+
+</body>
+</html>
