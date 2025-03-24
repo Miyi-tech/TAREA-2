@@ -1,8 +1,39 @@
+head {
+    color: blueviolet;
+    text-align: center;
+
+}
 p {
     color: blue;
-    font-size: ;
+    text-align: justify;
 }
 
-body {
-    background-color: cadetblue;
+* General */
+cuerpo {
+    familia de fuentes: Arial, sans-serif;
+    margen: 0;
+    relleno: 0;
+    color de fondo: #f9f9f9;
+    color: #333;
+    altura de línea: 1.6;
+}
+
+/* Tabla */
+.table {
+    relleno: 20px;
+    margen: 20px automático;
+    ancho máximo: 800px;
+    color de fondo: #ffffff;
+    radio del borde: 8px;
+    caja-sombra: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.formulario de contacto {
+    relleno: 20px;
+    margen: 20px automático;
+    ancho máximo: 800px;
+    color de fondo: #ffffff;
+    radio del borde: 8px;
+    caja-sombra: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
